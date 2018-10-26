@@ -25,6 +25,19 @@ class Publisher
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM publishers"
+    results = SqlRunner.run(sql)
+    return results.map{ |publisher| Publisher.new(publisher)}
+  end
+
+  def update()
+    sql = "UPDATE publishers SET (name, country, website) = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @country, @website, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
 
 
