@@ -20,22 +20,10 @@ class Publisher
     @id = results.first()['id'].to_i
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM publishers"
-    SqlRunner.run(sql)
-  end
-
   def self.all()
     sql = "SELECT * FROM publishers"
     results = SqlRunner.run(sql)
     return results.map{ |publisher| Publisher.new(publisher)}
-  end
-
-  def update()
-    sql = "UPDATE publishers SET (name, country, website) = ($1, $2, $3)
-    WHERE id = $4"
-    values = [@name, @country, @website, @id]
-    SqlRunner.run(sql, values)
   end
 
   def self.find(id)
@@ -45,19 +33,22 @@ class Publisher
     return Publisher.new(results.first)
   end
 
+  def update()
+    sql = "UPDATE publishers SET (name, country, website) = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @country, @website, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM publishers"
+    SqlRunner.run(sql)
+  end
+
   def delete()
     sql = "DELETE FROM publishers WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
-
-
-
-
-
-
-
-
-
 
 end
