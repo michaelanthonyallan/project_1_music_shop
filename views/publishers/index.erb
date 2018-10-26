@@ -1,0 +1,7 @@
+<h1> Publishers </h1>
+
+<% for publisher in @publishers %>
+<p>Name: <%=publisher.name()%></p>
+<p>Country: <%=publisher.country()%></p>
+<p>Website: <a href="<%=publisher.website()%>"><%=publisher.website%></p>
+<% end %>

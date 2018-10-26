@@ -1,0 +1,10 @@
+<h1> All Books </h1>
+
+<% for book in @books %>
+<p>Title: <%=book.title()%></p>
+<p>Composer: <%=book.composer()%></p>
+<p>Publisher: <%=book.publisher_name()%></p>
+<p>Price: <%=book.selling_price()%></p>
+<p>Stock Level: <%=book.stock_quantity()%></p>
+<p><a href="/book/:id">More info</a></p>
+<% end %>
