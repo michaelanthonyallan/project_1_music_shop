@@ -38,6 +38,20 @@ class Publisher
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM publishers WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Publisher.new(results.first)
+  end
+
+  def delete()
+    sql = "DELETE FROM publishers WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+
 
 
 
