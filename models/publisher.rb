@@ -51,4 +51,11 @@ class Publisher
     SqlRunner.run(sql, values)
   end
 
+  def all_books
+    sql = "SELECT * FROM books WHERE publisher_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map{|book| Book.new(book)}
+  end
+
 end

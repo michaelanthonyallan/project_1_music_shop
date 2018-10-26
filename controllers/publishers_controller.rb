@@ -8,7 +8,9 @@ get '/publishers' do
   erb (:"publishers/index")
 end
 
-# get 'publishers/:id' do
-#   @publisher = Publisher.find(params['id'].to_i)
-#   erb (:"publishers/show")
-# end
+get '/publishers/:id/all-books' do
+  id = (params['id'].to_i)
+  @publisher = Publisher.find(id)
+  @books = @publisher.all_books()
+  erb (:"publishers/show_all_books")
+end
