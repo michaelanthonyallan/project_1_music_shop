@@ -1,8 +1,16 @@
 <h1> Publishers </h1>
 
+<p><a href="/publishers/new">Add new publisher</a></p>
+
 <% for publisher in @publishers %>
 <p>Name: <%=publisher.name()%></p>
 <p>Country: <%=publisher.country()%></p>
-<p>Website: <a href="<%=publisher.website()%>"><%=publisher.website%></p>
+<p>Website: <a href="<%=publisher.website()%>"> <%=publisher.website %></p>
   <p><a href="publishers/<%=publisher.id %>/all-books">Show All Books</a></p>
+  <p><a href="publishers/edit/<%=publisher.id %>">Edit Publisher Info</a></p>
+  <form method = "post" action="/publishers/<%= publisher.id %>/delete">
+    <input type="submit" value= "Delete Publisher"/>
+  </form>
+
+
   <% end %>

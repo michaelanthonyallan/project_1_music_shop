@@ -14,3 +14,29 @@ get '/publishers/:id/all-books' do
   @books = @publisher.all_books()
   erb (:"publishers/show_all_books")
 end
+
+get '/publishers/new' do
+  erb(:"publishers/new")
+end
+
+post '/publishers' do
+  publisher = Publisher.new(params)
+  publisher.save()
+  redirect to("/publishers")
+end
+
+post '/publishers/:id/delete' do
+  publisher = Publisher.find(params["id"])
+  publisher.delete()
+  redirect to("/publishers")
+end
+
+get '/publishers/edit/:id' do
+  @publisher = Publisher.find(params["id"])
+  erb(:"publishers/edit")
+end
+
+post "/publishers/:id" do
+  Publisher.new(params).update()
+  redirect to '/publishers'
+end

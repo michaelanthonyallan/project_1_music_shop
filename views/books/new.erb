@@ -1,0 +1,30 @@
+<form action="/books" method="post">
+
+  <label for="title">Title </label>
+    <input id="title" type="text" name="title" />
+
+  <label for="composer">Composer </label>
+    <input id="composer" type="text" name="composer" />
+
+  <label for="description">Description </label>
+    <input id="description" type="text" name="description" />
+
+  <label for="stock_quantity">stock_quantity </label>
+    <input id="stock_quantity" type="text" name="stock_quantity" />
+
+  <label for="buying_cost">buying_cost </label>
+    <input id="buying_cost" type="text" name="buying_cost" />
+
+  <label for="selling_price">selling_price </label>
+    <input id="selling_price" type="text" name="selling_price" />
+
+  <label for="publisher_id">Publisher </label>
+    <select id="publisher_id" name="publisher_id">
+    <% for publisher in @publishers %>
+    <option value="<%=publisher.id%>"><%=publisher.name%></option>
+    <%end%>
+    </select>
+
+  <input type="submit" value = "Add Book" />
+
+</form>

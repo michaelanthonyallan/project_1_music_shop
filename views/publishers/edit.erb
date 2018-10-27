@@ -1,0 +1,14 @@
+<form method="post" action="/publishers/<%=@publisher.id%>" >
+
+  <label for="name">Name </label>
+    <input id="name" type="text" value="<%=@publisher.name%>" name="name" />
+
+  <label for="country">Country </label>
+    <input id="country" type="text" value="<%=@publisher.country%>" name="country" />
+
+  <label for="website">Website </label>
+    <input id="website" type="text" value="<%=@publisher.website%>" name="website" />
+
+  <input type="submit" value = "Edit Publisher" />
+
+</form>

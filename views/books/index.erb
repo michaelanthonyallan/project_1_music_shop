@@ -6,5 +6,7 @@
 <p>Publisher: <%=book.publisher_name()%></p>
 <p>Price: <%=book.selling_price()%></p>
 <p>Stock Level: <%=book.stock_quantity()%></p>
-<p><a href="/book/:id">More info</a></p>
+<p><a href="/books/<%=book.id%>/show">More info</a></p>
 <% end %>
+
+<p><a href="/books/new">Add a new book</a></p>
