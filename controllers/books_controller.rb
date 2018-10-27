@@ -31,3 +31,14 @@ post '/books' do
   book.save()
   redirect to("/books")
 end
+
+get '/books/edit/:id' do
+  @book = Book.find(params["id"])
+  @publishers = Publisher.all()
+  erb(:"books/edit")
+end
+
+post "/books/:id" do
+  Book.new(params).update()
+  redirect to '/books'
+end

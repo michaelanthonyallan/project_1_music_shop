@@ -6,7 +6,10 @@
 <p>Publisher: <%=@book.publisher_name()%></p>
 <p>Buying Cost: £<%=@book.buying_cost()%></p>
 <p>Selling Price: £<%=@book.selling_price()%></p>
-<p>Stock Level: <%=@book.stock_quantity()%></p>
+<p>Stock Quantity: <%=@book.stock_quantity()%></p>
+<p><%=@book.stock_indicator()%></p>
+
+<p><a href="/books/edit/<%=@book.id%>">Edit Book</a></p>
 
 <form method = "post" action="/books/<%= @book.id %>/show/delete">
   <input type="submit" value= "Delete Book"/>
