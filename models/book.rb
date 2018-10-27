@@ -10,7 +10,7 @@ class Book
     @title = options['title']
     @composer = options['composer']
     @description = options['description']
-    @stock_quantity = options['stock_quantity']
+    @stock_quantity = options['stock_quantity'].to_i
     @buying_cost = options['buying_cost']
     @selling_price = options['selling_price']
     @publisher_id = options['publisher_id']
@@ -63,6 +63,16 @@ class Book
     result = Publisher.new(publisher)
     name = result.name
     return name
+  end
+
+  def stock_indicator
+    if @stock_quantity >= 3
+      return "High Stock"
+    elsif @stock_quantity >= 1
+      return "Low Stock"
+    elsif @stock_quantity < 1
+      return "Out of Stock"
+    end
   end
 
 end
