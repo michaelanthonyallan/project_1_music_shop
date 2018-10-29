@@ -1,4 +1,4 @@
-<h1> These are all the books by a specific publisher! </h1>
+<h1> These are all the books by <%=@publisher.name%>! </h1>
 
 <% for book in @books %>
 <p>Title: <%=book.title()%></p>
