@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
-  <meta charset='utf-8'
-  <title>Music_Shop</title>
-  <link rel='stylesheet' href="/style.css" type="text/css">
+  <title>Music Shop</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
 </head>
+
+<div id='nav'
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/publishers">All Publishers</a>
+    <ul class="dropdown">
+      <li><a href="/publishers/new"> Add New Publisher</a></li>
+    </ul>
+  </li>
+  <li><a href="/books">All Books</a>
+    <ul class="dropdown">
+      <li><a href="/books/new">Add New Book</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
 
 <body>
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/publishers">All Publishers</a>
-    <a href="/publishers/new"> Add New Publisher</a>
-    <a href="/books">All Books</a>
-    <a href="/books/new">Add New Book</a>
-  </nav>
+
 
   <%= yield %>
 

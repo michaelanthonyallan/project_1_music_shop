@@ -5,6 +5,6 @@
 <p>Composer: <%=book.composer()%></p>
 <p>Publisher: <%=book.publisher_name()%></p>
 <p>Price: <%=book.selling_price()%></p>
-<p>Stock Level: <%=book.stock_quantity()%></p>
-<p><a href="/book/<%=book.id%>/show-info">More info</a></p>
+<p><%=book.stock_indicator()%></p>
+<p><a href="/books/<%=book.id%>/show">More info</a></p>
 <% end %>

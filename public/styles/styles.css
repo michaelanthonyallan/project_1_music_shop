@@ -1,0 +1,109 @@
+#nav{
+  border:1px solid #ccc;
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+#nav li{
+  position:relative;
+  display:inline;
+}
+#nav a{
+  display:inline-block;
+  padding:10px;
+}
+#nav ul{
+  position:absolute;
+  /*top:100%; Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
+  left:-9999px;
+  margin:0;
+  padding:0;
+  text-align:left;
+}
+#nav ul li{
+  display:inline-block;
+  text-align: center;
+}
+#nav li:hover ul{
+  left:0;
+}
+#nav li:hover a{
+  text-decoration:underline;
+  background:#FEF6FF;
+}
+#nav li:hover ul a{
+  text-decoration:none;
+  background:none;
+}
+#nav li:hover ul a:hover{
+  text-decoration:underline;
+  background:#FEF6FF;
+}
+#nav ul a{
+  white-space:nowrap;
+  display:block;
+  border-bottom:1px solid #ccc;
+}
+#nav a{
+  color:#845EC2;
+  text-decoration:none;
+  font-weight:bold;
+}
+#nav a:hover{
+  text-decoration:underline;
+  background:#FEF6FF;
+}
+
+
+.button {
+  font-family: monospace;
+  border: none;
+  color: #845EC2;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #B0A8B9;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background:#FEFEDF;
+  justify-content: center;
+align-items: center;
+}
+
+.button-group{
+  display: flex;
+  position: relative;
+  top: 250px;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 1fr;
+    max-width: 400px;
+    position: relative;
+    top: 50px;
+}
+
+label {
+    grid-column: 1fr;
+}
+
+input, button {
+    grid-column: 1fr;
+}
