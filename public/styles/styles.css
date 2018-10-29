@@ -13,24 +13,27 @@
 #nav a{
   display:inline-block;
   padding:10px;
+  width: 150px;
 }
 #nav ul{
   position:absolute;
-  /*top:100%; Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
+
   left:-9999px;
   margin:0;
   padding:0;
   text-align:left;
 }
 #nav ul li{
-  display:inline-block;
+  display:flex;
+  align-self:center;
+  justify-content:center;
   text-align: center;
 }
 #nav li:hover ul{
   left:0;
 }
 #nav li:hover a{
-  text-decoration:underline;
+  text-decoration:none;
   background:#FEF6FF;
 }
 #nav li:hover ul a{
@@ -77,7 +80,7 @@
 .button:hover {
   background:#FEFEDF;
   justify-content: center;
-align-items: center;
+  align-items: center;
 }
 
 .button-group{
@@ -92,18 +95,53 @@ align-items: center;
 
 
 form {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 150px 1fr;
-    max-width: 400px;
-    position: relative;
-    top: 50px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 150px 1fr;
+  max-width: 400px;
+  position: relative;
+  top: 50px;
 }
 
 label {
-    grid-column: 1fr;
+  grid-column: 1fr;
 }
 
 input, button {
-    grid-column: 1fr;
+  grid-column: 1fr;
+}
+
+/* .book-div {
+  font-size: 14px;
+  border-style: none none solid none;
+  border-width: 1px 0;
+  border-color: #B0A8B9;
+  padding: 15px 15px 10px 15px;
+}
+
+.key{
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.value{
+
+  font-family: 'Quattrocento', serif;
+} */
+
+.tg-wrap{
+  border-style: none none solid none;
+  border-color: #B0A8B9;
+  padding: 15px 15px 10px 15px;
+}
+
+.tg .tg-acmv{
+  font-family:'Quattrocento Sans', sans-serif;
+  text-align:left;
+  padding: 5px;
+}
+.tg .tg-t3rq{font-family:'Quattrocento', serif; text-align:left}
+.tg .tg-xldj{text-align:left}
+
+.tg th{
+  font-weight: normal;
 }
