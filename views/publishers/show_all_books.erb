@@ -1,10 +1,33 @@
-<h1> These are all the books by <%=@publisher.name%>! </h1>
+<div class="table-heading">
+  <h1> These are all the books by <%=@publisher.name%>! </h1>
+</div>
 
 <% for book in @books %>
-<p>Title: <%=book.title()%></p>
-<p>Composer: <%=book.composer()%></p>
-<p>Publisher: <%=book.publisher_name()%></p>
-<p>Price: <%=book.selling_price()%></p>
-<p><%=book.stock_indicator()%></p>
-<p><a href="/books/<%=book.id%>/show">More info</a></p>
+<div class="tg-wrap"><table class="tg">
+  <tr>
+    <th class="tg-acmv">Title:</th>
+    <th class="tg-t3rq"><%=book.title()%></th>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Composer:</td>
+    <td class="tg-t3rq"><%=book.composer()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Publisher:</td>
+    <td class="tg-t3rq"><%=book.publisher_name()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Price</td>
+    <td class="tg-t3rq">£<%=book.selling_price()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Stock Level</td>
+    <td class="tg-t3rq"><%=book.stock_indicator()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv"><a href="/books/<%=book.id()%>/show">More info</a></td>
+  </tr>
+</table>
+
+</div>
 <% end %>
