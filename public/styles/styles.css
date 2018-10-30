@@ -117,6 +117,7 @@ input[type=text], select,[type=number] {
     resize: both;
     font-family:'Quattrocento';
     font-size: 16px;
+    text-align: left;
 }
 
 input[type=submit] {
