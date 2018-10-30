@@ -1,4 +1,6 @@
-<form method="post" action="/publishers/<%=@publisher.id%>" >
+<div class="form-div">
+
+  <form method="post" action="/publishers/<%=@publisher.id%>" >
 
   <label for="name">Name </label>
     <input id="name" type="text" value="<%=@publisher.name%>" name="name" />
@@ -12,3 +14,5 @@
   <input type="submit" value = "Edit Publisher" />
 
 </form>
+
+</div>

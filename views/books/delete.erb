@@ -1,5 +1,5 @@
-<p> Are you sure you want to delete <%=@book.title%>?</p>
+<h1 class="warning"><br><br> Are you sure you want to delete<br><br> '<%=@book.title%>' <br><br>?</h1>
 
-<form method = "post" action="/books/<%= @book.id %>/show/delete">
+<form class="warning-button" method = "post" action="/books/<%= @book.id %>/show/delete">
   <input type="submit" value= "Delete Book"/>
 </form>

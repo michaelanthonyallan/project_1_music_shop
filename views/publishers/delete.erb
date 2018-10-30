@@ -1,8 +1,10 @@
-<h1> Warning, if you delete a publisher<br> all the associated books will be deleted also! </h1>
+<h1 class="warning"><br><br>Warning!</h1>
+
+  <h2 class="warning"> <br>If you delete a publisher all the associated books will be deleted! </h2>
 
 
-<p> Are you sure you want to delete <%=@publisher.name%>?</p>
+<h3 class="warning"> <br> Are you sure you want to delete <%=@publisher.name%>?<br><br></h3>
 
-<form method = "post" action="/publishers/<%=@publisher.id %>/delete">
-  <input type="submit" value= "Delete Publisher"/>
+<form class= "warning-button" method = "post" action="/publishers/<%=@publisher.id %>/delete">
+  <input class="warning-button" type="submit" value= "Delete Publisher"/>
 </form>

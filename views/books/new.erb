@@ -1,24 +1,26 @@
+<div class="form-div">
+
 <form action="/books" method="post">
 
-  <label for="title">Title </label>
-    <input id="title" type="text" name="title" />
+  <label for="title"> </label>
+    <input id="title" type="text" name="title" placeholder="Title"/>
 
-  <label for="composer">Composer </label>
-    <input id="composer" type="text" name="composer" />
+  <label for="composer"></label>
+    <input id="composer" type="text" name="composer" placeholder="Composer"/>
 
-  <label for="description">Description </label>
-    <input id="description" type="text" name="description" />
+  <label for="description"> </label>
+    <input id="description" type="text" name="description" placeholder="Description" />
 
-  <label for="stock_quantity">Stock Quantity </label>
-    <input id="stock_quantity" type="number" min = "0" name="stock_quantity" />
+  <label for="stock_quantity"></label>
+    <input id="stock_quantity" type="number" min = "0" name="stock_quantity" placeholder="Stock Quantity" />
 
-  <label for="buying_cost">Buying Cost </label>
-    <input id="buying_cost" type="text" name="buying_cost" />
+  <label for="buying_cost"> </label>
+    <input id="buying_cost" type="text" name="buying_cost" placeholder="Buying Cost (£)"/>
 
-  <label for="selling_price">Selling Price </label>
-    <input id="selling_price" type="text" name="selling_price" />
+  <label for="selling_price"> </label>
+    <input id="selling_price" type="text" name="selling_price" placeholder="Selling Price (£)"/>
 
-  <label for="publisher_id">Publisher </label>
+  <label for="publisher_id"> </label>
     <select id="publisher_id" name="publisher_id">
     <% for publisher in @publishers %>
     <option value="<%=publisher.id%>"><%=publisher.name%></option>
@@ -28,3 +30,5 @@
   <input type="submit" value = "Add Book" />
 
 </form>
+
+</div>
