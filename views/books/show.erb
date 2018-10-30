@@ -1,16 +1,44 @@
 <h1> Specific Book Info </h1>
 
-<p>Title: <%=@book.title()%></p>
-<p>Composer: <%=@book.composer()%></p>
-<p>Description: <%=@book.description()%></p>
-<p>Publisher: <%=@book.publisher_name()%></p>
-<p>Buying Cost: £<%=@book.buying_cost()%></p>
-<p>Selling Price: £<%=@book.selling_price()%></p>
-<p>Stock Quantity: <%=@book.stock_quantity()%></p>
-<p><%=@book.stock_indicator()%></p>
 
-<p><a href="/books/edit/<%=@book.id%>">Edit Book</a></p>
-
-<form method = "post" action="/books/<%= @book.id %>/show/delete">
-  <input type="submit" value= "Delete Book"/>
-</form>
+<div class="tg-wrap"><table class="tg">
+  <tr>
+    <th class="tg-acmv">Title:</th>
+    <th class="tg-t3rq"><%=@book.title()%></th>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Composer:</td>
+    <td class="tg-t3rq"><%=@book.composer()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Description:</td>
+    <td class="tg-t3rq"><%=@book.description()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Publisher:</td>
+    <td class="tg-t3rq"><%=@book.publisher_name()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Buying Cost:</td>
+    <td class="tg-t3rq">£<%=@book.buying_cost()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Price:</td>
+    <td class="tg-t3rq">£<%=@book.selling_price()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Stock Quantity</td>
+    <td class="tg-t3rq"><%=@book.stock_quantity()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Stock Level</td>
+    <td class="tg-t3rq"><%=@book.stock_indicator()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv"><a href="/books/edit/<%=@book.id()%>">Edit Book</a></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv"><a href="/books/delete/<%=@book.id()%>">Delete Book</a></td>
+  </tr>
+</table>
+</div>

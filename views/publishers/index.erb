@@ -1,16 +1,34 @@
-<h1> Publishers </h1>
+<div class="table-heading">
+  <h1> All Publishers </h1>
+</div>
 
-<p><a href="/publishers/new">Add new publisher</a></p>
+<%# <p><a href="/publishers/new">Add new publisher</a></p> %>
 
 <% for publisher in @publishers %>
-<p>Name: <%=publisher.name()%></p>
-<p>Country: <%=publisher.country()%></p>
-<p>Website: <a href="<%=publisher.website()%>"> <%=publisher.website %></p>
-  <p><a href="publishers/<%=publisher.id %>/all-books">Show All Books</a></p>
-  <p><a href="publishers/edit/<%=publisher.id %>">Edit Publisher Info</a></p>
-  <form method = "post" action="/publishers/<%= publisher.id %>/delete">
-    <input type="submit" value= "Delete Publisher"/>
-  </form>
+<div class="tg-wrap"><table class="tg">
+  <tr>
+    <th class="tg-acmv">Name:</th>
+    <th class="tg-t3rq"><%=publisher.name()%></th>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Country:</td>
+    <td class="tg-t3rq"><%=publisher.country()%></td>
+  </tr>
+  <tr>
+    <td class="tg-acmv">Website:</td>
+    <td class="tg-t3rq"><a href="<%=publisher.website()%>"> <%=publisher.website %></td>
+    </tr>
+    <tr>
+      <td class="tg-acmv"><a href="publishers/<%=publisher.id %>/all-books">Show All Books</a></td>
+    </tr>
+    <tr>
+      <td class="tg-acmv"><a href="publishers/edit/<%=publisher.id %>">Edit Publisher Info</a></td>
+    </tr>
+    <tr>
+      <td class="tg-acmv"><a href="publishers/delete/<%=publisher.id %>">Delete Publisher</a></td>
+    </tr>
+  </table>
 
+</div>
 
-  <% end %>
+<% end %>

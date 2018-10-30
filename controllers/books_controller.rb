@@ -32,6 +32,18 @@ post '/books' do
   redirect to("/books")
 end
 
+get '/books/delete/:id' do
+  id = (params['id'].to_i)
+  @book = Book.find(id)
+  erb (:"books/delete")
+end
+
+post '/books/:id/delete' do
+  book = Book.find(params["id"])
+  book.delete()
+  redirect to("/books")
+end
+
 get '/books/edit/:id' do
   @book = Book.find(params["id"])
   @publishers = Publisher.all()

@@ -25,6 +25,12 @@ post '/publishers' do
   redirect to("/publishers")
 end
 
+get '/publishers/delete/:id' do
+  id = (params['id'].to_i)
+  @publisher = Publisher.find(id)
+  erb (:"publishers/delete")
+end
+
 post '/publishers/:id/delete' do
   publisher = Publisher.find(params["id"])
   publisher.delete()

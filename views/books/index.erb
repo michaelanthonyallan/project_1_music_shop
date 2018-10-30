@@ -1,6 +1,6 @@
+<div class="table-heading">
 <h1> All Books </h1>
-
-<p><a href="/books/new">Add a new book</a></p>
+</div>
 
 
 <% for book in @books %>
@@ -11,7 +11,7 @@
   </tr>
   <tr>
     <td class="tg-acmv">Composer:</td>
-    <td class="tg-t3rq"><%=book.publisher_name()%></td>
+    <td class="tg-t3rq"><%=book.composer()%></td>
   </tr>
   <tr>
     <td class="tg-acmv">Publisher:</td>
@@ -25,6 +25,10 @@
     <td class="tg-acmv">Stock Level</td>
     <td class="tg-t3rq"><%=book.stock_indicator()%></td>
   </tr>
+  <tr>
+    <td class="tg-acmv"><a href="/books/<%=book.id()%>/show">More info</a></td>
+  </tr>
 </table>
+
 </div>
 <% end %>
