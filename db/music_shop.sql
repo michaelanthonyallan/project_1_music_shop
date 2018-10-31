@@ -17,5 +17,5 @@ CREATE TABLE books(
   buying_cost Numeric,
   selling_price Numeric,
   publisher_id INT4 REFERENCES publishers(id)
-  ON DELETE CASCADE
+  ON DELETE CASCADE NOT NULL
 );
