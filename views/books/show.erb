@@ -33,8 +33,7 @@
     <td class="tg-t3rq"><%=@book.stock_quantity()%></td>
   </tr>
   <tr>
-    <td class="tg-acmv">Stock Level</td>
-    <td class="tg-t3rq"><%=@book.stock_indicator()%></td>
+    <td class="tg-acmv" id="stock-level"><%=@book.stock_indicator()%></td>
   </tr>
   <tr>
     <td class="tg-acmv"><a href="/books/edit/<%=@book.id()%>">Edit Book</a></td>

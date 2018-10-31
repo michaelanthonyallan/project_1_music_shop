@@ -85,6 +85,14 @@ body {
   align-items: center;
 }
 
+a.button{
+  color: #845EC2
+}
+
+a.button:visited{
+  color: #845EC2
+}
+
 .button:hover {
   background:#FEFEDF;
   justify-content: center;
@@ -191,5 +199,24 @@ input[type=submit]:hover {
 
 .warning-button input[type=submit]:hover {
   backgound-color: #C34A36;
+}
 
+#stock-level {
+  font-weight: bold;
+}
+
+a:visited{
+  color:black;
+}
+
+a:link{
+  color:black;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
 }

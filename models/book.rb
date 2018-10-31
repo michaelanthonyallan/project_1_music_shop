@@ -66,9 +66,9 @@ class Book
   end
 
   def stock_indicator
-    if @stock_quantity >= 3
-      return "High Stock"
-    elsif @stock_quantity >= 1
+    # if @stock_quantity >= 3
+    #   return "High Stock"
+    if @stock_quantity.between?(1,3)
       return "Low Stock"
     elsif @stock_quantity < 1
       return "Out of Stock"
